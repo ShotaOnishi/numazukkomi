@@ -45,7 +45,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def public_id
-    return Picture.id
+    return model.id
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
