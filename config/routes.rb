@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pictures
   resources :samples
   resources :spots do
     collection do

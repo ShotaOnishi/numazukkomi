@@ -60,3 +60,8 @@ gem 'therubyracer' # javascript runtime。lessをコンパイルするために�
 gem 'less-rails'
 gem 'twitter-bootstrap-rails' # Bootstrapの本体
 gem 'geocoder'
+
+
+gem 'carrierwave'
+gem 'rmagick'
+gem 'cloudinary'
