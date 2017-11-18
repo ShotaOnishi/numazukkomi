@@ -1,0 +1,50 @@
+<li role="presentation" class="tab-list center-block" id=<%= spot.id%> <%if spot.id == 1 then%> class = "tab-list active" <%end%> oncick="getId(this.id)" >
+  <a aria-controls = <%= "tab#{spot.id}"%> data-toggle = "tab" href = <%= "#" + "tab#{spot.id}"%> role = "tab"><%= "tab#{spot.id}"%></a>
+</li>
+
+
+
+<script type="text/javascript">
+$(function() {
+    // 現在のたぶを取得
+    var tmp_num
+
+    function getId(id_value){
+      tmp_num = id_value;
+    }
+
+    //
+    $(".tab-list").click(function() {
+        alert("click tab");
+        tmp_num = document.getElementsByTagName(this);
+    }
+
+    // 次のタブを表示
+   $("#change-to-next-tab").click(function() {
+      // remove active class
+      $("#" + tmp_num).removeClass("active");
+      // update tmp num
+      tmp_num += 1;
+      // add active class
+      $("#" + tmp_num).addClass("active");
+
+      $(<%= spot.id %>)
+      var link = $(this).attr('href');
+      $('.nav-tabs a[href='+ link + "]").tab('show');
+
+   });
+
+   //前のタブを表示
+   $("#change-to-before-tab").click(function() {
+
+    $("#" + tmp_num).removeClass("active");
+    tmp_num -= 1;
+    $("#" + tmp_num).addClass("active");
+
+     var link = $(this).attr('');
+    $('.nav-tabs a[href='+ link + "]").tab('show');
+   });
+
+});
+
+</script>

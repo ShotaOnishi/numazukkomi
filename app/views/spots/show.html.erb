@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spot.name %>
+</p>
+
+<p>
+  <strong>Tsukkomi:</strong>
+  <%= @spot.tsukkomi %>
+</p>
+  <p>
+    <strong>Discription:</strong>
+  <%= @spot.discription %>
+  </p>
+
+<p>
+  <strong>Img:</strong>
+  <%= image_tag(@spot.img, :class => "menu_icon") %>
+ <!--  <%= @spot.img %> -->
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @spot.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @spot.lng %>
+</p>
+
+<%= link_to 'Edit', edit_spot_path(@spot) %> |
+<%= link_to 'Back', spots_path %>
