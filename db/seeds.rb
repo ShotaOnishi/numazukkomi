@@ -15,4 +15,4 @@ require "csv"
 
 CSV.foreach('db/numazu.csv') do |row|
   Spot.create(:name => row[0], :tsukkomi => row[1], :img => row[2], lat: 35.101853, lng: 138.859862, discription: "")
-end]
+end
