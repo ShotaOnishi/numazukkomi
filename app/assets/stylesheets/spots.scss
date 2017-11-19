@@ -25,11 +25,16 @@
 
 
 
-body{
-  margin: 0px;
-}
+// body{
+//   margin: 0px;
+// }
 
-p{
-  margin: 0px;
-}
+// p{
+//   margin: 0px;
+// }
 
+#tab-image{
+  border-radius: 50%;
+  width:  20px;       /* ※縦横を同値に */
+  height: 20px;
+}
