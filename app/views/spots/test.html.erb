@@ -1,5 +1,3 @@
-
-
 <p id="notice"><%= notice %></p>
 <div>
   <div class="tab-content">
@@ -9,7 +7,7 @@
   </div>
 
 
-    <div>
+    <div style="background-image: url(/images/bg.png); background-size: cover; background-position: 0% 85%;">
       <ul class="list nav nav-tabs start-tab" role="tablist">
         <% @spots.each do |spot| %>
         <%= render 'tabheader', spot: spot, index_id: "tab#{spot.id}", index_id_hash: "#" + "tab#{spot.id}"%>
