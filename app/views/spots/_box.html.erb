@@ -1,6 +1,4 @@
-
-
-<div class="tab-pane" <%if spot.id == 1 then%> class = "active tab-pane" <%end%> id= <%= "tab#{spot.id}" %> role="tabpanel">
+<div class="tab-pane" style="background-image: url(/images/bg.png), url(<%= spot.img%>); background-size: cover;"  <%if spot.id == 1 then%> class = "active tab-pane" <%end%> id= <%= "tab#{spot.id}" %> role="tabpanel" >
       <p>
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <h2 class = "text-center"><%= spot.id %></h2>
@@ -9,12 +7,14 @@
         <div>
             <span><a aria-controls= <% if spot.id == 1 %> <%="tab20"%> <%else%> <%="tab#{(spot.id-1)}"%> <%end%> data-toggle="tab" href = <% if spot.id == 1 %> <%="#tab20"%> <%else%> <%= "#" + "tab#{spot.id-1}"%> <%end%> role="tab" class = "pull-left" id="change-to-next-tab"><img src = "/images/left.png"></a></span>
             <span><a aria-controls= <% if spot.id == 20 %> <%="tab1"%> <%else%> <%="tab#{(spot.id+1)}"%> <%end%> data-toggle="tab" href = <% if spot.id == 20 %> <%="#tab1"%> <%else%> <%= "#" + "tab#{spot.id+1}"%> <%end%> role="tab" class = "pull-right" id="change-to-before-tab"><img src = "/images/right.png"></a></span>
-            <%= image_tag(spot.img, :class => "menu_icon center-block", height: "100", witth: "100") %>
         </div>
         <div><%= spot.discription %></div>
         <div class ="text-right"><%= spot.tsukkomi %></div>
       </p>
 </div>
+
+
+
 
 
 

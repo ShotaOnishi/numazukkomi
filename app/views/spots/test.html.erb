@@ -8,13 +8,13 @@
     <% end %>
   </div>
 
-  <nav class="scrol">
-    <div class = "mask">
+
+    <div>
       <ul class="list nav nav-tabs start-tab" role="tablist">
         <% @spots.each do |spot| %>
         <%= render 'tabheader', spot: spot, index_id: "tab#{spot.id}", index_id_hash: "#" + "tab#{spot.id}"%>
         <% end %>
         </ul>
     </div>
-  </nav>
+
 </div>
