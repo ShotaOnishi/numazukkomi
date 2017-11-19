@@ -19,7 +19,7 @@
       <tr>
         <td><%= spot.name %></td>
         <td><%= spot.tsukkomi %></td>
-        <td><%= image_tag(spot.img, :class => "menu_icon", height: "50", witth: "50") %></td>
+        <td><%= image_tag(spot.img.thumb.url, :class => "menu_icon", height: "50", witth: "50") %></td>
         <td><%= spot.discription %></td>
         <td><%= spot.address %></td>
         <td><%= link_to 'Show', spot %></td>

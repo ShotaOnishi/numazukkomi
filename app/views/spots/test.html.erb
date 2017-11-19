@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 <div>
-  <div class="tab-content">
+  <div class="tab-content" style="margin-bottom: -20px">
     <% @spots.each do |spot| %>
     <%= render 'box', spot: spot%>
     <% end %>
   </div>
 
 
-    <div style="background-image: url(/images/bg.png); background-size: cover; background-position: 0% 85%;">
+    <div style="background-image: url(/images/bg.png); background-size: cover; background-position: 0% 85%; margin-top: -30px">
       <ul class="list nav nav-tabs start-tab" role="tablist">
         <% @spots.each do |spot| %>
         <%= render 'tabheader', spot: spot, index_id: "tab#{spot.id}", index_id_hash: "#" + "tab#{spot.id}"%>
@@ -16,3 +16,5 @@
     </div>
 
 </div>
+
+<%= link_to 'New Spot', new_spot_path %>
