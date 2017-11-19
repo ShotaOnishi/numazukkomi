@@ -9,8 +9,7 @@
       <th>Tsukkomi</th>
       <th>Img</th>
       <th>Discription</th>
-      <th>Lat</th>
-      <th>Lng</th>
+      <th>Addrress</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,10 +19,9 @@
       <tr>
         <td><%= spot.name %></td>
         <td><%= spot.tsukkomi %></td>
-        <td><%= image_tag(spot.img, :class => "menu_icon") %></td>
+        <td><%= image_tag(spot.img, :class => "menu_icon", height: "50", witth: "50") %></td>
         <td><%= spot.discription %></td>
-        <td><%= spot.lat %></td>
-        <td><%= spot.lng %></td>
+        <td><%= spot.address %></td>
         <td><%= link_to 'Show', spot %></td>
         <td><%= link_to 'Edit', edit_spot_path(spot) %></td>
         <td><%= link_to 'Destroy', spot, method: :delete, data: { confirm: 'Are you sure?' } %></td>

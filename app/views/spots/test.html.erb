@@ -1,23 +1,20 @@
 
 
 <p id="notice"><%= notice %></p>
-
-<h1>Test</h1>
-
 <div>
-
   <div class="tab-content">
     <% @spots.each do |spot| %>
     <%= render 'box', spot: spot%>
     <% end %>
   </div>
 
-  <ul class="nav nav-tabs" role="tablist">
-    <% @spots.each do |spot| %>
-    <%= render 'tabheader', spot: spot, index_id: "tab#{spot.id}", index_id_hash: "#" + "tab#{spot.id}"%>
-    <% end %>
-  </ul>
+  <nav class="scrol">
+    <div class = "mask">
+      <ul class="list nav nav-tabs start-tab" role="tablist">
+        <% @spots.each do |spot| %>
+        <%= render 'tabheader', spot: spot, index_id: "tab#{spot.id}", index_id_hash: "#" + "tab#{spot.id}"%>
+        <% end %>
+        </ul>
+    </div>
+  </nav>
 </div>
-
-<script>
-</script>
