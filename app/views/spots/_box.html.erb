@@ -7,8 +7,8 @@
         <h2 class="text-center"><%= spot.name %></h2>
         <div class="text-center"><%= spot.address %></div>
         <div>
-            <span><a aria-controls= <% if spot.id == 1 %> <%="tab20"%> <%else%> <%="tab#{(spot.id-1)}"%> <%end%> data-toggle="tab" href = <% if spot.id == 1 %> <%="#tab20"%> <%else%> <%= "#" + "tab#{spot.id-1}"%> <%end%> role="tab" class = "pull-left" id="change-to-next-tab">前へ</a></span>
-            <span><a aria-controls= <% if spot.id == 20 %> <%="tab1"%> <%else%> <%="tab#{(spot.id+1)}"%> <%end%> data-toggle="tab" href = <% if spot.id == 20 %> <%="#tab1"%> <%else%> <%= "#" + "tab#{spot.id+1}"%> <%end%> role="tab" class = "pull-right" id="change-to-before-tab">後へ</a></span>
+            <span><a aria-controls= <% if spot.id == 1 %> <%="tab20"%> <%else%> <%="tab#{(spot.id-1)}"%> <%end%> data-toggle="tab" href = <% if spot.id == 1 %> <%="#tab20"%> <%else%> <%= "#" + "tab#{spot.id-1}"%> <%end%> role="tab" class = "pull-left" id="change-to-next-tab"><img src = "/images/left.png"></a></span>
+            <span><a aria-controls= <% if spot.id == 20 %> <%="tab1"%> <%else%> <%="tab#{(spot.id+1)}"%> <%end%> data-toggle="tab" href = <% if spot.id == 20 %> <%="#tab1"%> <%else%> <%= "#" + "tab#{spot.id+1}"%> <%end%> role="tab" class = "pull-right" id="change-to-before-tab"><img src = "/images/right.png"></a></span>
             <%= image_tag(spot.img, :class => "menu_icon center-block", height: "100", witth: "100") %>
         </div>
         <div><%= spot.discription %></div>
